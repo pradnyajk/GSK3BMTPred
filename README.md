@@ -46,7 +46,7 @@ GSK3BMtPred/
 │
 ├── TrainingScripts/                   # ML and DL model training scripts
 ├── TrainingData/                      # DL Model Training Data
-├── sample.csv/                        # Sample input SMILES files
+├── sample.csv                         # Sample input SMILES files
 ├── PaDEL-Descriptor/                  # PaDEL descriptor software
 ├── padel_config_file/                 # PaDEL descriptor configuration
 ├── padel_descriptor_file.xml          # Descriptor selection file
