@@ -96,32 +96,32 @@ No additional software installation is required when using Docker.
 
 Input must be a **CSV file** containing:
 
-- A single column
-- Header name: `SMILES`
+- Two columns
+- Header name: `Smiles`, `Name`
 - One molecule per row
 
 ### Example:
 
 ```csv
-SMILES
-CC1=CC=CC=C1
-CCN(CC)CCOC(=O)C1=CC=CC=C1
+Smiles, Name
+CC1=CC=CC=C1, Mol1
+CCN(CC)CCOC(=O)C1=CC=CC=C1, Mol2
 ```
 
-A reference file (`sample.smi`) is provided in the `input/` directory.
+A reference file (`sample.csv`) is provided.
 
 ---
 
 ## 🚀 Usage
 
-You can run GSK3BMtPred using either a prebuilt Docker image or by building locally.
+You can run GSK3BTPred using either a prebuilt Docker image or by building locally.
 
 ---
 
 ### 🔹 Option 1: Use Prebuilt Docker Image (Recommended)
 
 ```bash
-docker run --rm -v "${PWD}:/WorkPlace" ghcr.io/tanmaykumarvarma/gsk3bmtpred:latest sample.csv
+docker run --rm -v "${PWD}:/WorkPlace" ghcr.io/tanmaykumarvarma/gsk3bmtpred:latest input.csv output.csv 
 ```
 
 Replace `sample.csv` with your input file name.
@@ -134,7 +134,7 @@ Replace `sample.csv` with your input file name.
 
 ```bash
 git clone https://github.com/PGlab-NIPER/GSK3BMTPred.git
-cd GSK3BMtPred
+cd GSK3BMTPred
 git lfs pull
 ```
 
@@ -157,7 +157,7 @@ docker build -t gsk3bmtpred .
 #### 3️⃣ Run Prediction
 
 ```bash
-docker run --rm -v "${PWD}:/WorkPlace" gsk3bmtpred sample.csv
+docker run --rm -v "${PWD}:/WorkPlace" gsk3bmtpred input.csv output.csv
 ```
 
 ---
@@ -167,7 +167,7 @@ docker run --rm -v "${PWD}:/WorkPlace" gsk3bmtpred sample.csv
 After execution, a file named:
 
 ```
-multitask_prediction_results.csv
+output.csv
 ```
 
 will be generated in the working directory.
