@@ -97,15 +97,15 @@ No additional software installation is required when using Docker.
 Input must be a **CSV file** containing:
 
 - Two columns
-- Header name: `Smiles`, `Name`
+- Header name: `Smiles`,`Name`
 - One molecule per row
 
 ### Example:
 
 ```csv
-Smiles, Name
-CC1=CC=CC=C1, Mol1
-CCN(CC)CCOC(=O)C1=CC=CC=C1, Mol2
+Smiles,Name
+CC1=CC=CC=C1,Mol1
+CCN(CC)CCOC(=O)C1=CC=CC=C1,Mol2
 ```
 
 A reference file (`sample.csv`) is provided.
