@@ -124,7 +124,7 @@ You can run GSK3BMTPred using either a prebuilt Docker image or by building loca
 docker run --rm -v "${PWD}:/WorkPlace" ghcr.io/tanmaykumarvarma/gsk3bmtpred:latest input.csv output.csv 
 ```
 
-Replace `sample.csv` with your input file name.
+Replace `input.csv` with your input file name.
 
 ---
 
